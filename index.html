@@ -653,6 +653,169 @@ footer::before{
 .msb-wa{background:#25D366;color:#fff;}
 .msb-form{background:var(--accent-lt);color:var(--accent);border:1.5px solid var(--accent-md) !important;}
 
+/* ═══════════════════════════════════════
+   ТИПИЧНЫЕ СИТУАЦИИ
+═══════════════════════════════════════ */
+.situations-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px;}
+.sit-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:var(--shadow);transition:all .35s cubic-bezier(.16,1,.3,1);cursor:default;}
+.sit-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg),0 0 0 1px rgba(10,122,95,.1);}
+.sit-card-top{padding:28px 28px 0;display:flex;align-items:flex-start;gap:16px;}
+.sit-icon{width:52px;height:52px;border-radius:var(--r);background:var(--accent-lt);border:1.5px solid var(--accent-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sit-icon svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.6;}
+.sit-label{display:inline-block;padding:3px 10px;background:var(--accent-lt);border-radius:100px;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;}
+.sit-title{font-family:var(--font-head);font-size:19px;font-weight:700;line-height:1.2;}
+.sit-body{padding:20px 28px 28px;}
+.sit-section-label{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px;margin-top:16px;}
+.sit-section-label:first-child{margin-top:0;}
+.sit-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.sit-list li{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:400;color:var(--text-muted);line-height:1.5;}
+.sit-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--text-dim);flex-shrink:0;margin-top:5px;}
+.sit-list.green li::before{background:var(--accent);}
+.sit-list.green li{color:var(--text);}
+.sit-cta{margin-top:20px;display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--border);}
+.sit-cta-text{font-size:13px;color:var(--text-muted);}
+.sit-cta-link{font-size:13px;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:5px;transition:gap .2s;white-space:nowrap;}
+.sit-card:hover .sit-cta-link{gap:9px;}
+@media(max-width:768px){.situations-grid{grid-template-columns:1fr;}}
+
+/* ═══════════════════════════════════════
+   ПЕРВЫЕ 24 ЧАСА
+═══════════════════════════════════════ */
+.timeline-section{padding:96px 0;background:var(--bg);}
+.timeline-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:center;margin-top:52px;}
+.timeline-left{}
+.timeline-promise{margin-top:28px;padding:20px 24px;background:var(--accent-lt);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;font-size:15px;font-weight:600;color:var(--text);line-height:1.6;}
+.timeline-promise span{color:var(--accent);}
+.timeline-cta-wrap{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
+.timeline-right{position:relative;}
+.timeline-track{position:absolute;left:22px;top:12px;bottom:12px;width:2px;background:linear-gradient(to bottom,var(--accent),var(--accent-md));border-radius:2px;}
+.tl-steps{display:flex;flex-direction:column;gap:0;}
+.tl-step{display:flex;gap:24px;padding:18px 0;position:relative;}
+.tl-step:last-child{padding-bottom:0;}
+.tl-dot-wrap{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:46px;}
+.tl-dot{width:46px;height:46px;border-radius:50%;background:var(--accent-lt);border:2px solid var(--accent-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;position:relative;z-index:2;}
+.tl-dot svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.7;}
+.tl-step:hover .tl-dot{background:var(--accent);border-color:var(--accent);}
+.tl-step:hover .tl-dot svg{stroke:#fff;}
+.tl-content{padding-top:10px;}
+.tl-time{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);margin-bottom:4px;}
+.tl-title{font-family:var(--font-head);font-size:16px;font-weight:700;margin-bottom:4px;}
+.tl-desc{font-size:13px;font-weight:300;color:var(--text-muted);line-height:1.6;}
+@media(max-width:960px){.timeline-inner{grid-template-columns:1fr;}}
+
+/* ═══════════════════════════════════════
+   ENHANCED REVIEWS
+═══════════════════════════════════════ */
+.reviews-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:48px;}
+.reviews-rating-block{display:flex;align-items:center;gap:18px;}
+.reviews-big-score{font-family:var(--font-head);font-size:56px;font-weight:800;color:var(--text);line-height:1;}
+.reviews-stars-col{display:flex;flex-direction:column;gap:4px;}
+.reviews-stars-row{display:flex;gap:3px;}
+.reviews-star{width:18px;height:18px;fill:#F59E0B;}
+.reviews-count{font-size:13px;color:var(--text-muted);font-weight:500;}
+.reviews-platforms{display:flex;gap:10px;flex-wrap:wrap;}
+.platform-badge{display:flex;align-items:center;gap:8px;padding:8px 16px;background:#fff;border:1px solid var(--border);border-radius:100px;font-size:13px;font-weight:600;color:var(--text-muted);box-shadow:var(--shadow);}
+.platform-badge-dot{width:8px;height:8px;border-radius:50%;}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.rv-card{background:#fff;border:1px solid var(--border);border-radius:var(--rl);padding:24px;box-shadow:var(--shadow);transition:all .3s;position:relative;overflow:hidden;}
+.rv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transition:transform .3s;transform-origin:left;}
+.rv-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.rv-card:hover::before{transform:scaleX(1);}
+.rv-card.featured{grid-column:span 2;background:linear-gradient(145deg,var(--accent-lt) 0%,#f0faf6 100%);border-color:var(--accent-md);}
+.rv-card.featured::before{transform:scaleX(1);}
+.rv-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.rv-stars{display:flex;gap:2px;}
+.rv-star{width:14px;height:14px;fill:#F59E0B;}
+.rv-date{font-size:11px;color:var(--text-dim);font-weight:500;}
+.rv-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:var(--accent-lt);border:1px solid var(--accent-md);border-radius:100px;font-size:11px;font-weight:700;color:var(--accent);margin-bottom:10px;}
+.rv-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.rv-text{font-size:14px;font-weight:300;color:var(--text-muted);line-height:1.75;margin-bottom:16px;font-style:italic;}
+.rv-text::before{content:'«';}
+.rv-text::after{content:'»';}
+.rv-footer{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--border);}
+.rv-avatar{width:36px;height:36px;border-radius:50%;background:var(--accent-lt);border:1.5px solid var(--accent-md);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:14px;font-weight:800;color:var(--accent);flex-shrink:0;}
+.rv-info{flex:1;}
+.rv-name{font-size:14px;font-weight:700;margin-bottom:1px;}
+.rv-meta{font-size:11px;color:var(--text-dim);line-height:1.4;}
+.rv-duration{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;background:var(--bg2);border-radius:100px;font-size:11px;font-weight:600;color:var(--text-muted);}
+@media(max-width:960px){.reviews-grid{grid-template-columns:1fr 1fr;}.rv-card.featured{grid-column:span 2;}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr;}.rv-card.featured{grid-column:span 1;}.reviews-top{flex-direction:column;align-items:flex-start;}}
+
+/* ═══════════════════════════════════════
+   URGENCY TOAST (П.7)
+═══════════════════════════════════════ */
+.urgency-toast{
+  position:fixed;bottom:100px;left:28px;z-index:500;
+  background:#fff;border-radius:var(--rl);
+  padding:14px 18px;
+  box-shadow:0 8px 40px rgba(10,26,21,.15), 0 0 0 1px var(--border);
+  display:flex;align-items:center;gap:12px;
+  max-width:320px;
+  transform:translateX(-120%);
+  transition:transform .5s cubic-bezier(.16,1,.3,1);
+  pointer-events:none;
+}
+.urgency-toast.show{transform:translateX(0);pointer-events:auto;}
+.urgency-toast.hide{transform:translateX(-120%);}
+.toast-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent-lt);border:2px solid var(--accent-md);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:14px;font-weight:800;color:var(--accent);flex-shrink:0;}
+.toast-body{flex:1;min-width:0;}
+.toast-name{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.toast-action{font-size:12px;color:var(--text-muted);line-height:1.4;}
+.toast-time{font-size:11px;color:var(--text-dim);white-space:nowrap;margin-top:2px;}
+.toast-close{width:22px;height:22px;border-radius:50%;background:var(--bg2);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text-dim);flex-shrink:0;transition:background .2s;}
+.toast-close:hover{background:var(--border);}
+.toast-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:blink 2s infinite;}
+@media(max-width:600px){.urgency-toast{left:12px;right:12px;max-width:none;bottom:80px;}}
+
+/* URGENCY CHIP in hero */
+.urgency-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 14px;
+  background:#fff;border:1px solid var(--border);border-radius:100px;
+  font-size:12px;font-weight:600;color:var(--text-muted);
+  box-shadow:var(--shadow);
+  margin-top:16px;
+}
+.urgency-chip-dot{width:7px;height:7px;border-radius:50%;background:#F59E0B;animation:blink 1.8s infinite;}
+.urgency-chip strong{color:var(--text);}
+
+/* LIVE COUNTER in CTA */
+.cta-live-counter{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 20px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);
+  margin-bottom:22px;
+}
+.cta-live-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:blink 2s infinite;flex-shrink:0;}
+.cta-live-text{font-size:13px;color:rgba(255,255,255,.6);line-height:1.4;}
+.cta-live-num{font-family:var(--font-head);font-size:22px;font-weight:800;color:#fff;line-height:1;}
+
+/* ═══════════════════════════════════════
+   GUARANTEE SECTION (П.8)
+═══════════════════════════════════════ */
+.guarantee-section{padding:96px 0;background:var(--text);position:relative;overflow:hidden;}
+.guarantee-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.guarantee-section::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 5% 50%,rgba(10,122,95,.2) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 95% 30%,rgba(10,148,112,.15) 0%,transparent 55%);}
+.guarantee-header{text-align:center;margin-bottom:52px;position:relative;z-index:1;}
+.guarantee-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent-md);margin-bottom:14px;}
+.guarantee-eyebrow::before{content:'';width:20px;height:2px;background:var(--accent-md);border-radius:2px;}
+.guarantee-title{font-family:var(--font-head);font-size:clamp(26px,3vw,40px);font-weight:800;color:#fff;margin-bottom:12px;line-height:1.2;}
+.guarantee-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.45);max-width:500px;margin:0 auto;line-height:1.75;}
+.guarantee-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1;}
+.guarantee-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rl);padding:32px 24px;transition:all .3s;position:relative;overflow:hidden;}
+.guarantee-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transition:transform .35s;transform-origin:left;}
+.guarantee-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px);border-color:rgba(10,148,112,.4);}
+.guarantee-card:hover::before{transform:scaleX(1);}
+.guarantee-icon{width:52px;height:52px;border-radius:var(--r);background:rgba(10,122,95,.2);border:1px solid rgba(10,148,112,.3);display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.guarantee-icon svg{width:24px;height:24px;stroke:var(--accent2);fill:none;stroke-width:1.6;}
+.guarantee-card-title{font-family:var(--font-head);font-size:17px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3;}
+.guarantee-card-desc{font-size:13px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.65;}
+.guarantee-card-badge{display:inline-flex;align-items:center;gap:5px;margin-top:14px;padding:4px 12px;background:rgba(10,122,95,.25);border:1px solid rgba(10,148,112,.3);border-radius:100px;font-size:11px;font-weight:700;color:var(--accent2);}
+.guarantee-cta{text-align:center;margin-top:44px;position:relative;z-index:1;}
+.guarantee-cta-note{font-size:14px;color:rgba(255,255,255,.35);margin-top:14px;}
+@media(max-width:960px){.guarantee-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.guarantee-grid{grid-template-columns:1fr;}}
+
 </head>
 <body>
 
@@ -758,6 +921,10 @@ footer::before{
           <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Проверка СБ</div>
           <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Замена за 24 часа</div>
           <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Официальный договор</div>
+        </div>
+        <div class="urgency-chip">
+          <span class="urgency-chip-dot"></span>
+          <span>Свободных сиделок на этой неделе: <strong id="freeCount">8</strong></span>
         </div>
       </div>
       <div class="hero-img-col reveal d2">
@@ -920,6 +1087,152 @@ footer::before{
       <div class="pain-card reveal d3"><div class="pain-num">03</div><p class="pain-text">«Пробовали справляться сами — выгорели. Но и чужому человеку в доме страшно доверять»</p></div>
     </div>
     <p class="pain-footer reveal">Именно для таких семей мы работаем уже <em>15 лет</em>.</p>
+  </div>
+</section>
+
+<!-- SITUATIONS -->
+<section class="section" id="situations">
+  <div class="container">
+    <div class="reveal" style="max-width:640px;">
+      <div class="eyebrow">Узнаёте ситуацию?</div>
+      <h2>Мы работаем именно<br>с такими случаями</h2>
+      <p style="font-size:16px;font-weight:300;color:var(--text-muted);margin-top:14px;line-height:1.75;">Каждая ситуация требует разного подхода. Расскажите нам — подберём сиделку с нужным опытом.</p>
+    </div>
+    <div class="situations-grid">
+
+      <!-- Инсульт -->
+      <article class="sit-card reveal d1">
+        <div class="sit-card-top">
+          <div class="sit-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 110 18A9 9 0 0112 2z"/><path d="M8 12h4M14 9l-2 3 2 3"/></svg>
+          </div>
+          <div>
+            <div class="sit-label">Инсульт / ОНМК</div>
+            <h3 class="sit-title">Восстановление после инсульта</h3>
+          </div>
+        </div>
+        <div class="sit-body">
+          <div class="sit-section-label">Типичная картина</div>
+          <ul class="sit-list">
+            <li>Нарушение речи, памяти или координации</li>
+            <li>Частичный или полный паралич одной стороны</li>
+            <li>Нужна помощь с гигиеной и передвижением</li>
+            <li>Риск повторного инсульта при отсутствии контроля</li>
+          </ul>
+          <div class="sit-section-label">Что делает наша сиделка</div>
+          <ul class="sit-list green">
+            <li>Выполняет назначения реабилитолога</li>
+            <li>Помогает с ЛФК и ежедневными упражнениями</li>
+            <li>Контролирует приём препаратов по расписанию</li>
+            <li>Сопровождает в поликлинику и на процедуры</li>
+          </ul>
+          <div class="sit-cta">
+            <span class="sit-cta-text">Опыт постинсультного ухода</span>
+            <span class="sit-cta-link open-modal">Подобрать сиделку →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Деменция -->
+      <article class="sit-card reveal d2">
+        <div class="sit-card-top">
+          <div class="sit-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5c0 1.5-1.5 2-2.5 3M12 16h.01"/></svg>
+          </div>
+          <div>
+            <div class="sit-label">Деменция / Альцгеймер</div>
+            <h3 class="sit-title">Уход при когнитивных нарушениях</h3>
+          </div>
+        </div>
+        <div class="sit-body">
+          <div class="sit-section-label">Типичная картина</div>
+          <ul class="sit-list">
+            <li>Не узнаёт близких, теряется дома</li>
+            <li>Уходит из дома, не помнит дороги назад</li>
+            <li>Агрессия, плаксивость, ночные беспокойства</li>
+            <li>Нельзя оставлять одного даже на час</li>
+          </ul>
+          <div class="sit-section-label">Что делает наша сиделка</div>
+          <ul class="sit-list green">
+            <li>Специальная техника общения без конфликтов</li>
+            <li>Структурированный распорядок дня</li>
+            <li>Когнитивная стимуляция: память, внимание, речь</li>
+            <li>Круглосуточное присутствие при необходимости</li>
+          </ul>
+          <div class="sit-cta">
+            <span class="sit-cta-text">Сиделки со специализацией</span>
+            <span class="sit-cta-link open-modal">Подобрать сиделку →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Перелом -->
+      <article class="sit-card reveal d3">
+        <div class="sit-card-top">
+          <div class="sit-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 3l6 18M6 7l12 10M18 7L6 17"/></svg>
+          </div>
+          <div>
+            <div class="sit-label">Перелом шейки бедра</div>
+            <h3 class="sit-title">Уход после операции или травмы</h3>
+          </div>
+        </div>
+        <div class="sit-body">
+          <div class="sit-section-label">Типичная картина</div>
+          <ul class="sit-list">
+            <li>После операции — полная зависимость от помощи</li>
+            <li>Высокий риск пролежней при долгом лежании</li>
+            <li>Нужна помощь с туалетом, купанием, едой</li>
+            <li>Психологически тяжёлый период для пожилого</li>
+          </ul>
+          <div class="sit-section-label">Что делает наша сиделка</div>
+          <ul class="sit-list green">
+            <li>Профилактика пролежней: позиционирование каждые 2 ч</li>
+            <li>Помощь с ходьбой с опорой по плану врача</li>
+            <li>Полный гигиенический уход в постели</li>
+            <li>Психологическая поддержка и мотивация к восстановлению</li>
+          </ul>
+          <div class="sit-cta">
+            <span class="sit-cta-text">Срочный выход — от 24 ч</span>
+            <span class="sit-cta-link open-modal">Подобрать сиделку →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Пожилой одинокий / общий уход -->
+      <article class="sit-card reveal d4">
+        <div class="sit-card-top">
+          <div class="sit-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <div class="sit-label">Одинокий пожилой</div>
+            <h3 class="sit-title">Поддержка и регулярный уход</h3>
+          </div>
+        </div>
+        <div class="sit-body">
+          <div class="sit-section-label">Типичная картина</div>
+          <ul class="sit-list">
+            <li>Живёт один, вы далеко или заняты работой</li>
+            <li>Справляется в быту, но вас не покидает тревога</li>
+            <li>Нужна компания, контроль, помощь по дому</li>
+            <li>Иногда — сопровождение к врачу или в аптеку</li>
+          </ul>
+          <div class="sit-section-label">Что делает наша сиделка</div>
+          <ul class="sit-list green">
+            <li>Визиты от 1 часа несколько раз в неделю</li>
+            <li>Приготовление еды, уборка, помощь по дому</li>
+            <li>Контроль давления, температуры, самочувствия</li>
+            <li>Вы получаете звонок-отчёт после каждого визита</li>
+          </ul>
+          <div class="sit-cta">
+            <span class="sit-cta-text">От 1 часа в день</span>
+            <span class="sit-cta-link open-modal">Подобрать сиделку →</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
@@ -1130,34 +1443,251 @@ footer::before{
   </div>
 </section>
 
+<!-- TIMELINE 24H -->
+<section class="timeline-section section-alt" id="timeline">
+  <div class="container">
+    <div class="timeline-inner">
+      <div class="reveal">
+        <div class="eyebrow">Первые 24 часа</div>
+        <h2>Что произойдёт после<br>вашего звонка</h2>
+        <p style="font-size:16px;font-weight:300;color:var(--text-muted);margin-top:14px;line-height:1.75;">Многие не звонят — потому что не знают, что будет дальше. Рассказываем честно и по шагам.</p>
+        <div class="timeline-promise">
+          Большинство семей говорят: <span>«Жаль, что не позвонили раньше»</span>. Первый звонок — просто разговор. Без обязательств.
+        </div>
+        <div class="timeline-cta-wrap">
+          <a href="tel:+74951234567" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Позвонить сейчас
+          </a>
+          <button class="btn btn-outline open-modal">Оставить заявку</button>
+        </div>
+      </div>
+      <div class="timeline-right reveal d2">
+        <div class="timeline-track" aria-hidden="true"></div>
+        <div class="tl-steps">
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">Сейчас · 15–20 минут</div>
+              <div class="tl-title">Вы звоните или оставляете заявку</div>
+              <div class="tl-desc">Просто разговор. Менеджер слушает, задаёт вопросы о ситуации, характере, распорядке. Никаких анкет.</div>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">В тот же день · 1–3 часа</div>
+              <div class="tl-title">Подбираем подходящего специалиста</div>
+              <div class="tl-desc">Из нашей базы отбираем 2–3 кандидата по опыту, специализации и характеру. Присылаем вам краткое резюме каждого.</div>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="23,11 17,17 14,14"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">В тот же день или завтра</div>
+              <div class="tl-title">Вы утверждаете кандидата</div>
+              <div class="tl-desc">Можете задать любые вопросы по телефону. Если никто не подошёл — продолжаем искать бесплатно.</div>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="8,12 11,15 16,9"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">До выхода на работу</div>
+              <div class="tl-title">Подписываем официальный договор</div>
+              <div class="tl-desc">Всё фиксируется на бумаге: обязанности, расписание, оплата. Никаких устных договорённостей.</div>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">День 1 · первый визит</div>
+              <div class="tl-title">Знакомство при вашем участии</div>
+              <div class="tl-desc">Куратор присутствует на первом выходе. Вы видите работу сиделки, задаёте вопросы. Если что-то не так — заменим без лишних слов.</div>
+            </div>
+          </div>
+          <div class="tl-step">
+            <div class="tl-dot-wrap">
+              <div class="tl-dot">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.08 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg>
+              </div>
+            </div>
+            <div class="tl-content">
+              <div class="tl-time">После каждого визита</div>
+              <div class="tl-title">Вы в курсе всего</div>
+              <div class="tl-desc">Краткий отчёт по телефону или в мессенджере: самочувствие, что сделано, что важно. Куратор всегда на связи.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- REVIEWS -->
 <section class="section" id="reviews">
   <div class="container">
     <div class="reveal" style="max-width:560px;">
-      <div class="eyebrow">Отзывы</div>
-      <h2>Что говорят семьи,<br>которые нам доверились</h2>
+      <div class="eyebrow">Отзывы семей</div>
+      <h2>Что говорят те,<br>кто уже доверился нам</h2>
     </div>
-    <div class="reviews-photo-row">
-      <article class="review-featured reveal d1">
-        <img src="https://images.unsplash.com/photo-1447452001602-7090c7ab2db3?auto=format&fit=crop&w=800&q=80" alt="Счастливая пожилая женщина" class="review-featured-img" loading="lazy">
-        <div class="review-featured-body">
-          <div class="review-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <p class="review-text" style="margin-top:12px;">«Отец категорически отказывался от любой помощи. Через две недели сам ждал Наташу к завтраку. Первый раз за три года я спокойно уехала в отпуск.»</p>
-          <div class="review-author" style="margin-top:16px;"><div class="review-avatar">Е</div><div><div class="review-name">Елена</div><div class="review-age">46 лет, Москва</div></div></div>
+    <div class="reviews-top reveal">
+      <div class="reviews-rating-block">
+        <div class="reviews-big-score">4.9</div>
+        <div class="reviews-stars-col">
+          <div class="reviews-stars-row">
+            <svg class="reviews-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="reviews-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="reviews-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="reviews-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="reviews-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="reviews-count">На основе 1 200+ семей · с 2009 года</div>
+        </div>
+      </div>
+      <div class="reviews-platforms">
+        <div class="platform-badge"><span class="platform-badge-dot" style="background:#4285F4"></span>Google — 4.9</div>
+        <div class="platform-badge"><span class="platform-badge-dot" style="background:#FC3F1D"></span>Яндекс — 4.8</div>
+        <div class="platform-badge"><span class="platform-badge-dot" style="background:#25D366"></span>94% рекомендуют</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <!-- Featured -->
+      <article class="rv-card featured reveal d1">
+        <div class="rv-top">
+          <div class="rv-stars">
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rv-date">Март 2024 · 14 месяцев с нами</div>
+        </div>
+        <div class="rv-badge"><span class="rv-badge-dot"></span>Деменция · Ховрино</div>
+        <p class="rv-text" style="font-size:15px;">Папа категорически отказывался принимать кого-то постороннего. Мы уже отчаялись. Наша сиделка Галина Юрьевна пришла — и через три дня папа сам звал её к завтраку. За 14 месяцев ни одного конфликта. Первый раз за три года я уехала в отпуск спокойно.</p>
+        <div class="rv-footer">
+          <div class="rv-avatar">Е</div>
+          <div class="rv-info">
+            <div class="rv-name">Елена Соколова</div>
+            <div class="rv-meta">46 лет · дочь пациента · Ховрино, Москва</div>
+          </div>
+          <div class="rv-duration">14 мес.</div>
         </div>
       </article>
-      <div style="display:flex;flex-direction:column;gap:20px;">
-        <article class="review-secondary reveal d2">
-          <div class="review-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <p class="review-text">«Мать после инсульта, лежачая. Галина оказалась терпеливее нас всех вместе взятых. Уже восемь месяцев вместе.»</p>
-          <div class="review-author"><div class="review-avatar">А</div><div><div class="review-name">Андрей</div><div class="review-age">51 год, Москва</div></div></div>
-        </article>
-        <article class="review-secondary reveal d3">
-          <div class="review-stars"><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg><svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-          <p class="review-text">«Обожглись однажды — сиделка из интернета пропала без предупреждения. В "Истоке" договор, куратор, звонок если что. Наконец-то спим нормально.»</p>
-          <div class="review-author"><div class="review-avatar">И</div><div><div class="review-name">Ирина</div><div class="review-age">44 года, Москва</div></div></div>
-        </article>
-      </div>
+
+      <article class="rv-card reveal d2">
+        <div class="rv-top">
+          <div class="rv-stars">
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rv-date">Январь 2024 · 8 месяцев</div>
+        </div>
+        <div class="rv-badge"><span class="rv-badge-dot"></span>Инсульт · Митино</div>
+        <p class="rv-text">Мать после ОНМК, лежачая. Думал — не найдём никого терпеливее нас. Ошибался. Восемь месяцев — и мама начала садиться в кровати. Сиделка работает строго по плану реабилитолога.</p>
+        <div class="rv-footer">
+          <div class="rv-avatar">А</div>
+          <div class="rv-info">
+            <div class="rv-name">Андрей Волков</div>
+            <div class="rv-meta">51 год · сын пациентки · Митино, Москва</div>
+          </div>
+          <div class="rv-duration">8 мес.</div>
+        </div>
+      </article>
+
+      <article class="rv-card reveal d3">
+        <div class="rv-top">
+          <div class="rv-stars">
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rv-date">Ноябрь 2023 · 11 месяцев</div>
+        </div>
+        <div class="rv-badge"><span class="rv-badge-dot"></span>Перелом шейки · Бирюлёво</div>
+        <p class="rv-text">Обожглись раньше с частной сиделкой — исчезла без предупреждения. В «Истоке» договор, куратор, ежедневный отчёт. Наконец-то нормально сплю.</p>
+        <div class="rv-footer">
+          <div class="rv-avatar">И</div>
+          <div class="rv-info">
+            <div class="rv-name">Ирина Малышева</div>
+            <div class="rv-meta">44 года · дочь пациентки · Бирюлёво, Москва</div>
+          </div>
+          <div class="rv-duration">11 мес.</div>
+        </div>
+      </article>
+
+      <article class="rv-card reveal d1">
+        <div class="rv-top">
+          <div class="rv-stars">
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rv-date">Февраль 2024 · 6 месяцев</div>
+        </div>
+        <div class="rv-badge"><span class="rv-badge-dot"></span>Регулярный уход · Химки</div>
+        <p class="rv-text">Бабушке 84, живёт одна в Химках. Сиделка приходит три раза в неделю. После каждого визита — короткое сообщение что и как. Стоимость честная, как в договоре.</p>
+        <div class="rv-footer">
+          <div class="rv-avatar">М</div>
+          <div class="rv-info">
+            <div class="rv-name">Михаил Рябов</div>
+            <div class="rv-meta">38 лет · внук · Химки / работает в Москве</div>
+          </div>
+          <div class="rv-duration">6 мес.</div>
+        </div>
+      </article>
+
+      <article class="rv-card reveal d2">
+        <div class="rv-top">
+          <div class="rv-stars">
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+            <svg class="rv-star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="rv-date">Апрель 2024 · 4 месяца</div>
+        </div>
+        <div class="rv-badge"><span class="rv-badge-dot"></span>После операции · Люблино</div>
+        <p class="rv-text">Мама сломала бедро в марте. Звонила в три службы — только «Исток» назвал конкретную цену и выслал специалиста на следующий день. Теперь мама встаёт с ходунками.</p>
+        <div class="rv-footer">
+          <div class="rv-avatar">О</div>
+          <div class="rv-info">
+            <div class="rv-name">Ольга Третьякова</div>
+            <div class="rv-meta">52 года · дочь пациентки · Люблино, Москва</div>
+          </div>
+          <div class="rv-duration">4 мес.</div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
@@ -1208,12 +1738,88 @@ footer::before{
   </div>
 </section>
 
+<!-- GUARANTEE -->
+<section class="guarantee-section" id="guarantee">
+  <div class="container">
+    <div class="guarantee-header reveal">
+      <div class="guarantee-eyebrow">Наши гарантии</div>
+      <h2 class="guarantee-title">Мы отвечаем за результат.<br>Письменно.</h2>
+      <p class="guarantee-sub">Каждая гарантия зафиксирована в договоре. Не слова — обязательства.</p>
+    </div>
+    <div class="guarantee-grid">
+
+      <div class="guarantee-card reveal d1">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24"><polyline points="1,4 1,10 7,10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+        </div>
+        <div class="guarantee-card-title">Замена за 24 часа — бесплатно</div>
+        <div class="guarantee-card-desc">Если сиделка заболела, не подошла или просто не понравилась — обеспечим замену за сутки. Это наша задача, не ваша.</div>
+        <div class="guarantee-card-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4,12 9,17 20,6"/></svg>
+          Зафиксировано в договоре
+        </div>
+      </div>
+
+      <div class="guarantee-card reveal d2">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9,12 11,14 15,10"/></svg>
+        </div>
+        <div class="guarantee-card-title">Ничего не пропадёт из дома</div>
+        <div class="guarantee-card-desc">Каждая сиделка прошла проверку службы безопасности: судимости, долги, соцсети. Мы несём полную ответственность за всех, кого направляем.</div>
+        <div class="guarantee-card-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4,12 9,17 20,6"/></svg>
+          Проверка СБ перед выходом
+        </div>
+      </div>
+
+      <div class="guarantee-card reveal d3">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        </div>
+        <div class="guarantee-card-title">Цена не изменится после подписания</div>
+        <div class="guarantee-card-desc">Всё фиксируется в официальном договоре до начала работы. Никаких скрытых доплат, «за выходные», «за сложность» или «за район».</div>
+        <div class="guarantee-card-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4,12 9,17 20,6"/></svg>
+          Официальный договор
+        </div>
+      </div>
+
+      <div class="guarantee-card reveal d4">
+        <div class="guarantee-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.08 5.18 2 2 0 015 3h3a2 2 0 012 1.72 12.05 12.05 0 00.7 2.81 2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 17z"/></svg>
+        </div>
+        <div class="guarantee-card-title">Куратор отвечает в течение часа</div>
+        <div class="guarantee-card-desc">У вас есть персональный куратор. Звонок, сообщение — отвечаем в рабочее время в течение часа. Вы никогда не остаётесь один на один с ситуацией.</div>
+        <div class="guarantee-card-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4,12 9,17 20,6"/></svg>
+          Пн–Вс, 8:00–22:00
+        </div>
+      </div>
+
+    </div>
+    <div class="guarantee-cta reveal">
+      <button class="btn btn-primary open-modal" style="padding:16px 36px;font-size:16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Получить гарантии письменно — оставить заявку
+      </button>
+      <div class="guarantee-cta-note">Первая консультация бесплатна · Без обязательств · Перезвоним сегодня</div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="cta">
   <div class="container">
     <div class="cta-inner reveal">
       <div class="cta-left">
         <p class="cta-overline">Сделайте первый шаг</p>
+        <div class="cta-live-counter">
+          <span class="cta-live-dot"></span>
+          <div>
+            <div class="cta-live-num" id="todayCount">7</div>
+            <div class="cta-live-text">семей обратились к нам сегодня</div>
+          </div>
+        </div>
         <h2 class="cta-title">Пока вы думаете —<br><span>ваши родители одни</span></h2>
         <p class="cta-sub">Большинство семей говорят: «Жаль, что не позвонили раньше». Первый звонок ни к чему не обязывает.</p>
         <div class="cta-btns">
@@ -1238,6 +1844,18 @@ footer::before{
     <div class="footer-bottom"><span class="footer-copy">© 2009–2024 Патронажная служба «Исток». Все права защищены.</span><span class="footer-copy">Уход за пожилыми на дому в Москве</span></div>
   </div>
 </footer>
+
+<!-- URGENCY TOAST -->
+<div class="urgency-toast" id="urgencyToast" role="status" aria-live="polite">
+  <span class="toast-dot"></span>
+  <div class="toast-avatar" id="toastAvatar">М</div>
+  <div class="toast-body">
+    <div class="toast-name" id="toastName">Мария К.</div>
+    <div class="toast-action" id="toastAction">записалась на консультацию</div>
+    <div class="toast-time" id="toastTime">3 минуты назад · Митино</div>
+  </div>
+  <button class="toast-close" id="toastClose" aria-label="Закрыть">✕</button>
+</div>
 
 <!-- FLOATING BUTTONS -->
 <div class="floating-btn" id="floatingBtn">
@@ -1607,6 +2225,64 @@ daysSlider.addEventListener("input", () => {
 updateSlider(daysSlider);
 
 calcUpdate(); // initial render
+
+// ── URGENCY: toast notifications ──
+const toastData = [
+  { name:"Мария К.", initial:"М", district:"Митино",       action:"записалась на консультацию",  ago:"2 минуты назад" },
+  { name:"Сергей В.", initial:"С", district:"Бутово",      action:"подобрал сиделку для мамы",   ago:"7 минут назад" },
+  { name:"Ольга Т.",  initial:"О", district:"Люблино",     action:"оставила заявку на звонок",   ago:"11 минут назад" },
+  { name:"Андрей М.", initial:"А", district:"Химки",       action:"уточнил стоимость ухода",     ago:"18 минут назад" },
+  { name:"Наталья Р.",initial:"Н", district:"Хорошёво",    action:"записалась на консультацию",  ago:"24 минуты назад" },
+  { name:"Дмитрий К.",initial:"Д", district:"Орехово",     action:"подобрал сиделку для папы",   ago:"31 минуту назад" },
+  { name:"Ирина С.",  initial:"И", district:"Ховрино",     action:"оставила заявку",             ago:"38 минут назад" },
+];
+const toast = document.getElementById("urgencyToast");
+const toastClose = document.getElementById("toastClose");
+let toastIdx = 0;
+let toastTimer = null;
+
+function showToast(){
+  if(!toast) return;
+  const d = toastData[toastIdx % toastData.length];
+  toastIdx++;
+  document.getElementById("toastAvatar").textContent = d.initial;
+  document.getElementById("toastName").textContent = d.name;
+  document.getElementById("toastAction").textContent = d.action;
+  document.getElementById("toastTime").textContent = d.ago + " · " + d.district;
+  toast.classList.remove("hide");
+  toast.classList.add("show");
+  toastTimer = setTimeout(() => { toast.classList.add("hide"); toast.classList.remove("show"); }, 5000);
+}
+toastClose.addEventListener("click", () => { clearTimeout(toastTimer); toast.classList.add("hide"); toast.classList.remove("show"); });
+// First toast after 10s, then every 40s
+setTimeout(() => { showToast(); setInterval(showToast, 40000); }, 10000);
+
+// ── URGENCY: free slots chip ──
+// Simulate: starts at 8, decreases realistically through the day
+(function(){
+  const el = document.getElementById("freeCount");
+  if(!el) return;
+  const hour = new Date().getHours();
+  // Morning: many available, evening: fewer
+  const base = hour < 10 ? 11 : hour < 14 ? 9 : hour < 18 ? 7 : 5;
+  const jitter = Math.floor(Math.random()*3);
+  el.textContent = base - jitter;
+})();
+
+// ── URGENCY: today counter in CTA ──
+(function(){
+  const el = document.getElementById("todayCount");
+  if(!el) return;
+  const hour = new Date().getHours();
+  // Count grows through the day
+  const base = Math.floor(hour * 0.7) + 2 + Math.floor(Math.random()*3);
+  el.textContent = base;
+  // Occasionally increment
+  setInterval(() => {
+    const current = parseInt(el.textContent) || 0;
+    if(Math.random() < 0.3) el.textContent = current + 1;
+  }, 90000);
+})();
 </script>
 </body>
 </html>
