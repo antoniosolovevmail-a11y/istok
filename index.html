@@ -77,28 +77,46 @@ nav{position:sticky;top:0;z-index:100;background:rgba(247,249,248,.94);backdrop-
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
 /* HERO */
-.hero{padding:72px 0 0;overflow:hidden;}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-bottom:72px;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;background:var(--accent-lt);border:1px solid var(--accent-md);border-radius:100px;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:22px;}
-.hero-badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:blink 2s infinite;}
-.hero h1{margin-bottom:20px;}
-.hero-sub{font-size:17px;font-weight:300;color:var(--text-muted);line-height:1.75;margin-bottom:34px;max-width:500px;}
-.hero-btns{display:flex;gap:12px;margin-bottom:40px;flex-wrap:wrap;}
+/* ── COVER HERO ── */
+.hero{position:relative;min-height:680px;display:flex;align-items:center;overflow:hidden;padding:0;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(236,247,242,.94) 0%,rgba(236,247,242,.84) 42%,rgba(236,247,242,.50) 68%,rgba(236,247,242,.15) 100%);}
+.hero-cover-inner{position:relative;z-index:2;max-width:580px;padding:110px 0 90px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;background:rgba(10,122,95,.1);border:1px solid var(--accent-md);border-radius:100px;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:24px;}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:blink 2s infinite;}
+.hero h1{margin-bottom:22px;color:var(--text);}
+.hero-sub{font-size:18px;font-weight:400;color:var(--text-muted);line-height:1.72;margin-bottom:28px;max-width:480px;}
+.hero-phone-line{display:flex;align-items:center;gap:14px;margin-bottom:26px;flex-wrap:wrap;}
+.hero-phone-number{font-family:var(--font-head);font-size:28px;font-weight:800;color:var(--accent);text-decoration:none;letter-spacing:-1px;transition:color .2s;}
+.hero-phone-number:hover{color:var(--accent2);}
+.hero-phone-note{font-size:13px;color:var(--text-dim);}
+.hero-btns{display:flex;gap:12px;margin-bottom:36px;flex-wrap:wrap;}
 .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;}
-.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--text-muted);}
-.trust-check{width:20px;height:20px;border-radius:50%;background:var(--accent-lt);border:1.5px solid var(--accent-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.trust-check svg{width:10px;height:10px;stroke:var(--accent);fill:none;stroke-width:2.5;}
-.hero-img-col{position:relative;}
-.hero-stat-chip{position:absolute;top:28px;right:-12px;background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 18px;box-shadow:var(--shadow);text-align:center;z-index:2;}
-.hero-stat-chip-val{font-family:var(--font-head);font-size:26px;font-weight:800;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums;}
-.hero-stat-chip-label{font-size:11px;font-weight:600;color:var(--text-muted);margin-top:3px;}
-.hero-image-wrap{border-radius:var(--rxl);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;}
-.hero-image-wrap img{width:100%;height:100%;object-fit:cover;}
-.hero-img-card{position:absolute;bottom:28px;left:28px;right:28px;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-radius:var(--r);padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 24px rgba(0,0,0,.1);}
-.hero-img-card-icon{width:42px;height:42px;border-radius:50%;background:var(--accent-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.hero-img-card-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.5;}
-.hero-img-card-title{font-weight:700;font-size:13px;color:var(--text);}
-.hero-img-card-sub{font-size:12px;color:var(--text-muted);}
+.trust-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--text-muted);}
+.trust-check{width:22px;height:22px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.trust-check svg{width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+
+/* Rating chip */
+.hero-rating-chip{position:absolute;bottom:44px;right:36px;z-index:3;background:rgba(255,255,255,.90);border:1px solid var(--border);border-radius:18px;padding:16px 22px;display:flex;align-items:center;gap:14px;box-shadow:0 8px 32px rgba(10,26,21,.10);}
+.hero-rating-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-lt);border:1.5px solid var(--accent-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hero-rating-icon svg{width:22px;height:22px;fill:#F59E0B;stroke:none;}
+.hero-rating-num{font-family:var(--font-head);font-size:24px;font-weight:900;color:var(--text);line-height:1;}
+.hero-rating-label{font-size:12px;color:var(--text-muted);margin-top:2px;}
+
+/* Nav transparency over hero */
+nav.nav-on-hero{background:rgba(248,252,250,.78);border-bottom-color:rgba(10,122,95,.04);}
+
+@media(max-width:960px){
+  .hero-cover-inner{max-width:100%;}
+  .hero-overlay{background:rgba(236,247,242,.92);}
+  .hero-rating-chip{display:none;}
+}
+@media(max-width:600px){
+  .hero-cover-inner{padding:80px 0 64px;}
+  .hero-phone-number{font-size:23px;}
+  .hero h1{font-size:38px;}
+}
 
 /* QUIZ */
 .quiz-section{padding:80px 0;background:var(--text);position:relative;overflow:hidden;}
@@ -453,29 +471,7 @@ footer{background:var(--text);border-top:1px solid rgba(255,255,255,.07);padding
               radial-gradient(ellipse 50% 70% at 90% 70%, rgba(10,122,95,0.03) 0%, transparent 55%);
 }
 
-/* HERO AMBIENT */
-.hero{
-  background: linear-gradient(175deg, #F7F9F8 0%, #EFF7F3 40%, #F7F9F8 100%);
-  position: relative;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
-  background:
-    radial-gradient(ellipse 60% 80% at 90% 20%, rgba(10,122,95,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 5% 80%, rgba(10,148,112,0.06) 0%, transparent 55%);
-}
-
-/* AMBIENT ORBS */
-.hero-orbs{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;}
-.hero-orb{position:absolute;border-radius:50%;filter:blur(60px);animation:orbFloat 12s ease-in-out infinite;}
-.hero-orb-1{width:320px;height:320px;background:rgba(10,122,95,0.07);top:-80px;right:10%;animation-delay:0s;}
-.hero-orb-2{width:200px;height:200px;background:rgba(10,148,112,0.06);bottom:20%;left:5%;animation-delay:-4s;}
-.hero-orb-3{width:160px;height:160px;background:rgba(10,122,95,0.05);top:40%;right:20%;animation-delay:-8s;}
-@keyframes orbFloat{
-  0%,100%{transform:translate(0,0) scale(1);}
-  33%{transform:translate(20px,-30px) scale(1.05);}
-  66%{transform:translate(-15px,20px) scale(0.95);}
-}
+/* Hero bg handled by cover layout */
 
 /* CARD PREMIUM GLOW */
 .pain-card,.service-card,.caregiver-card,.how-card{
@@ -1042,7 +1038,7 @@ h3{font-size:21px;line-height:1.3;}
 ══════════════════════════════════════════════════ */
 
 /* — РИТМ ФОНОВ СЕКЦИЙ — */
-.hero{background:linear-gradient(150deg,#F8FBFA 0%,#EBF6F1 55%,#F8FBFA 100%);}
+/* Hero — cover layout, see .hero CSS above */
 #pain{background:#F2F9F6;}
 #situations{background:#FFFFFF;}
 #security{background:#F7FCF9;}
@@ -1292,48 +1288,49 @@ nav{background:rgba(248,251,250,.94);backdrop-filter:blur(18px);-webkit-backdrop
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-orbs">
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-bg">
+    <img class="hero-bg-photo"
+         src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1800&q=85"
+         alt="Сиделка и пожилой человек — патронажная служба Источник+">
+    <div class="hero-overlay"></div>
   </div>
+
   <div class="container">
-    <div class="hero-inner">
-      <div class="reveal">
-        <div class="hero-badge"><span class="hero-badge-dot"></span>Патронажная служба · Москва · с 2009 года</div>
-        <h1>Надёжный уход<br>за <span class="accent-text">24 часа.</span></h1>
-        <p class="hero-sub">Ваш родитель будет под заботливым присмотром дома — пока вы на работе, в другом городе или просто хотите выспаться.</p>
-        <div class="hero-phone-line">
-          <a href="tel:+74951234567" class="hero-phone-number">+7 (495) XXX-XX-XX</a>
-          <span class="hero-phone-note">Пн–Вс 8:00–22:00 · Перезвоним за 30 мин</span>
-        </div>
-        <div class="hero-btns">
-          <a href="tel:+74951234567" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-            Позвонить — подберём сегодня
-          </a>
-          <button class="btn btn-outline open-modal">Оставить заявку</button>
-        </div>
-        <div class="hero-trust">
-          <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>15 лет на рынке</div>
-          <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Проверка СБ</div>
-          <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Замена за 24 часа</div>
-          <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Официальный договор</div>
-        </div>
+    <div class="hero-cover-inner reveal">
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Патронажная служба · Москва · с 2009 года</div>
+      <h1>Ваш близкий<br>в <span class="accent-text">заботливых</span><br>руках.</h1>
+      <p class="hero-sub">Подберём проверенную сиделку за 24 часа. Официальный договор, гарантия замены, куратор всегда на связи.</p>
+      <div class="hero-phone-line">
+        <a href="tel:+74951234567" class="hero-phone-number">+7 (495) XXX-XX-XX</a>
+        <span class="hero-phone-note">Пн–Вс 8:00–22:00 · Перезвоним за 30 мин</span>
       </div>
-      <div class="hero-img-col reveal d2">
-        <div class="hero-stat-chip"><div class="hero-stat-chip-val">15</div><div class="hero-stat-chip-label">лет опыта</div></div>
-        <div class="hero-image-wrap">
-          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=900&q=80" alt="Пожилая женщина с сиделкой — патронажная служба Источник+">
-          <div class="hero-img-card">
-            <div class="hero-img-card-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
-            <div><div class="hero-img-card-title">1 200+ семей доверились нам</div><div class="hero-img-card-sub">4.9 ★ · Google и Яндекс</div></div>
-          </div>
-        </div>
+      <div class="hero-btns">
+        <a href="tel:+74951234567" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Позвонить — подберём сегодня
+        </a>
+        <button class="btn btn-outline open-modal">Оставить заявку</button>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>15 лет на рынке</div>
+        <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Проверка СБ</div>
+        <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Замена за 24 часа</div>
+        <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Официальный договор</div>
       </div>
     </div>
   </div>
-  <svg viewBox="0 0 1440 40" fill="none" style="display:block;width:100%;" aria-hidden="true"><path d="M0 0h1440v20C1200 40 960 40 720 20S240 0 0 20V0z" fill="#152620"/></svg>
+
+  <!-- Floating rating chip -->
+  <div class="hero-rating-chip reveal d2">
+    <div class="hero-rating-icon">
+      <svg viewBox="0 0 24 24" width="22" height="22"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#F59E0B"/></svg>
+    </div>
+    <div>
+      <div class="hero-rating-num">4.9</div>
+      <div class="hero-rating-label">1 200+ семей · Google</div>
+    </div>
+  </div>
+
 </header>
 
 <!-- PAIN -->
@@ -2436,7 +2433,18 @@ document.querySelectorAll(".caregiver-card").forEach((card, i) => {
   card.style.transitionDelay = (i * 0.08) + "s";
 });
 
-// ── FLOATING TOGGLE ──
+// ── NAV — прозрачность над героем ──
+(function(){
+  const nav = document.querySelector('nav');
+  const hero = document.querySelector('.hero');
+  if(!nav || !hero) return;
+  function updateNav(){
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    nav.classList.toggle('nav-on-hero', heroBottom > 60);
+  }
+  window.addEventListener('scroll', updateNav, {passive:true});
+  updateNav();
+})();
 const floatToggle = document.getElementById("floatToggle");
 const messengerGroup = document.getElementById("messengerGroup");
 floatToggle.addEventListener("click", () => {
