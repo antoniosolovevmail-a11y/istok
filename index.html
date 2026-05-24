@@ -38,8 +38,12 @@ button{font-family:var(--font-body);cursor:pointer;}
 body::before{content:\'\';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(10,122,95,0.05) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0;}
 .container{max-width:1120px;margin:0 auto;padding:0 32px;position:relative;z-index:1;}
 .section{padding:96px 0;}.section-alt{background:var(--bg2);}
-/* reveal handled below */
-._placeholder{display:none;}
+.hero-phone-line{display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap;}
+.hero-phone-number{font-family:var(--font-head);font-size:26px;font-weight:800;color:var(--accent);text-decoration:none;letter-spacing:-.5px;transition:color .2s;}
+.hero-phone-number:hover{color:var(--accent2);}
+.hero-phone-note{font-size:13px;color:var(--text-dim);font-weight:400;}
+@media(max-width:600px){.hero-phone-number{font-size:22px;}.hero-phone-note{width:100%;}}
+
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
 .eyebrow::before{content:\'\';width:20px;height:2px;background:var(--accent);border-radius:2px;}
 h1,h2,h3{font-family:var(--font-head);letter-spacing:-.4px;line-height:1.18;}
@@ -1231,14 +1235,18 @@ h3{font-size:21px;}
     <div class="hero-inner">
       <div class="reveal">
         <div class="hero-badge"><span class="hero-badge-dot"></span>Патронажная служба · Москва · с 2009 года</div>
-        <h1>Ваши родители<br>в безопасности —<br>пока вы <span class="accent-text">живёте<br>своей жизнью</span></h1>
-        <p class="hero-sub">Профессиональный уход за пожилыми и больными на дому в Москве. От 1 часа до круглосуточного проживания.</p>
+        <h1>Найдём надёжную<br>сиделку за <span class="accent-text">24 часа.</span><br>Проверенную.</h1>
+        <p class="hero-sub">Ваш родитель будет под заботливым присмотром дома — пока вы на работе, в другом городе или просто хотите выспаться.</p>
+        <div class="hero-phone-line">
+          <a href="tel:+74951234567" class="hero-phone-number">+7 (495) XXX-XX-XX</a>
+          <span class="hero-phone-note">Пн–Вс 8:00–22:00 · Перезвоним за 30 мин</span>
+        </div>
         <div class="hero-btns">
           <a href="tel:+74951234567" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-            Позвонить и подобрать сиделку
+            Позвонить — подберём сегодня
           </a>
-          <a href="#quiz" class="btn btn-outline">Пройти тест</a>
+          <button class="btn btn-outline open-modal">Оставить заявку</button>
         </div>
         <div class="hero-trust">
           <div class="trust-item"><div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>15 лет на рынке</div>
@@ -1253,7 +1261,7 @@ h3{font-size:21px;}
           <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=900&q=80" alt="Пожилая женщина с сиделкой — патронажная служба Источник+">
           <div class="hero-img-card">
             <div class="hero-img-card-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
-            <div><div class="hero-img-card-title">Каждый клиент — как родной</div><div class="hero-img-card-sub">Индивидуальный подход с первого дня</div></div>
+            <div><div class="hero-img-card-title">1 200+ семей доверились нам</div><div class="hero-img-card-sub">4.9 ★ · Google и Яндекс</div></div>
           </div>
         </div>
       </div>
@@ -1262,13 +1270,29 @@ h3{font-size:21px;}
   <svg viewBox="0 0 1440 40" fill="none" style="display:block;width:100%;" aria-hidden="true"><path d="M0 0h1440v20C1200 40 960 40 720 20S240 0 0 20V0z" fill="#152620"/></svg>
 </header>
 
+<!-- PAIN -->
+<section class="section section-alt" id="pain">
+  <div class="container">
+    <div class="reveal" style="max-width:560px;">
+      <div class="eyebrow">Мы понимаем вас</div>
+      <h2>Вы не одни в этой ситуации</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal d1"><div class="pain-num">01</div><p class="pain-text">«Звоню родителям каждые два часа с работы — и всё равно не могу сосредоточиться»</p></div>
+      <div class="pain-card reveal d2"><div class="pain-num">02</div><p class="pain-text">«Живём в разных районах Москвы. Приезжаю через день — но боюсь, что однажды не успею»</p></div>
+      <div class="pain-card reveal d3"><div class="pain-num">03</div><p class="pain-text">«Пробовали справляться сами — выгорели. Но и чужому человеку в доме страшно доверять»</p></div>
+    </div>
+    <p class="pain-footer reveal">Именно для таких семей мы работаем уже <em>15 лет</em>.</p>
+  </div>
+</section>
+
 <!-- QUIZ -->
 <section class="quiz-section" id="quiz">
   <div class="container">
     <div class="quiz-header reveal">
-      <div class="quiz-eyebrow">Интерактивный тест</div>
-      <h2 class="quiz-title">Определите уровень<br>необходимой помощи</h2>
-      <p class="quiz-subtitle">6 вопросов — и вы поймёте, какой формат ухода подойдёт вашему родителю, и на что обратить внимание врачу.</p>
+      <div class="quiz-eyebrow">Бесплатная оценка · 2 минуты</div>
+      <h2 class="quiz-title">Какой уход нужен<br>вашему близкому?</h2>
+      <p class="quiz-subtitle">Ответьте на несколько вопросов — и мы подберём формат, который подойдёт именно вашей ситуации.</p>
     </div>
     <div class="quiz-box reveal d2">
       <div class="quiz-progress-wrap">
@@ -1391,22 +1415,6 @@ h3{font-size:21px;}
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PAIN -->
-<section class="section section-alt" id="pain">
-  <div class="container">
-    <div class="reveal" style="max-width:560px;">
-      <div class="eyebrow">Мы понимаем вас</div>
-      <h2>Вы не одни в этой ситуации</h2>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-card reveal d1"><div class="pain-num">01</div><p class="pain-text">«Звоню родителям каждые два часа с работы — и всё равно не могу сосредоточиться»</p></div>
-      <div class="pain-card reveal d2"><div class="pain-num">02</div><p class="pain-text">«Живём в разных районах Москвы. Приезжаю через день — но боюсь, что однажды не успею»</p></div>
-      <div class="pain-card reveal d3"><div class="pain-num">03</div><p class="pain-text">«Пробовали справляться сами — выгорели. Но и чужому человеку в доме страшно доверять»</p></div>
-    </div>
-    <p class="pain-footer reveal">Именно для таких семей мы работаем уже <em>15 лет</em>.</p>
   </div>
 </section>
 
@@ -2121,7 +2129,7 @@ h3{font-size:21px;}
     <div class="cta-inner reveal">
       <div class="cta-left">
         <p class="cta-overline">Сделайте первый шаг</p>
-        <h2 class="cta-title">Пока вы думаете —<br><span>ваши родители одни</span></h2>
+        <h2 class="cta-title">Один звонок —<br><span>и мы берём всё на себя</span></h2>
         <p class="cta-sub">Большинство семей говорят: «Жаль, что не позвонили раньше». Первый звонок ни к чему не обязывает.</p>
         <div class="cta-btns">
           <a href="tel:+74951234567" class="btn btn-cta-primary btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>Позвонить в «Источник+»</a>
